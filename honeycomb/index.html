@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#284d3e">
+  <meta name="description" content="A question-first financial information ecosystem. Explore role-based analysis, vLEI-linked source agents, and verifiable evidence in an interactive academic prototype.">
+  <title>Honeycomb — Future Financial Reporting</title>
+  <link rel="icon" href="assets/honeycomb.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="data.js"></script>
+  <script defer src="trust.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <button class="brand" data-action="home" aria-label="Honeycomb home"><span class="brand-mark" aria-hidden="true">⬡<i>✦</i></span><span>honeycomb<small>FUTURE FINANCIAL REPORTING</small></span></button>
+    <nav class="header-links" aria-label="Main navigation"><button data-action="research">The research</button><button data-action="tour" class="text-link">Guided demo <span aria-hidden="true"><svg class="inline-arrow" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 14 14 4M4 4h10v10"/></svg></span></button><button class="demo-badge" data-action="about"><span></span> Research prototype</button></nav>
+  </header>
+  <main id="main">
+    <section id="welcome" class="welcome">
+      <div class="welcome-hero">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="tiny-flower" aria-hidden="true">✿</span> A LITTLE CURIOSITY. A CLEARER PICTURE.</div>
+          <h1>Good questions.<br><em>Connected</em> answers.</h1>
+          <p class="hero-description">Step into a different way of understanding a company. Follow a question across financial statements, years, and the world beyond the numbers.</p>
+          <div class="hero-cta"><a href="#role-picker" class="button primary">Find your perspective <span aria-hidden="true"><svg class="inline-arrow" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 14 14 4M4 4h10v10"/></svg></span></a><button class="button quiet" data-action="tour"><span aria-hidden="true">▷</span> Take the guided tour</button></div>
+          <div class="hero-footnote"><span class="mini-check">✓</span> Traceable sources <span class="separator">·</span> Role-aware access <span class="separator">·</span> Explainable answers</div>
+        </div>
+        <div class="hero-art">
+          <span class="art-spark spark-one" aria-hidden="true">✧</span><span class="art-spark spark-two" aria-hidden="true">✿</span>
+          <div class="picnic-frame"><img src="assets/woodland-picnic.png" width="408" height="411" alt="Winnie the Pooh and friends gathering flowers at a sunny woodland picnic"></div>
+          <div class="art-note"><span aria-hidden="true">✦</span><div>Every number<br><b>has a story.</b></div><span class="note-line" aria-hidden="true"></span></div>
+          <div class="art-caption">A thoughtful little place for big questions.</div>
+        </div>
+      </div>
+      <section id="role-picker" class="role-section" aria-labelledby="role-heading">
+        <div class="section-heading"><div><span class="eyebrow">01 / CHOOSE YOUR PERSPECTIVE</span><h2 id="role-heading">Same company. Different questions.</h2></div><p>Your role shapes the evidence you can explore.<br><span class="subtle">Role selection simulates access; it is not a real login.</span></p></div>
+        <div id="role-grid" class="role-grid"></div>
+        <div class="entry-note"><span aria-hidden="true">◌</span> Meet <b>Miklos &amp; Co.</b>, a fictional company for this research demonstration. All financial figures and credentials are simulated.</div>
+      </section>
+      <section class="idea-strip" aria-label="The research idea"><div class="strip-number">?</div><div><span class="eyebrow">START WITH THE QUESTION</span><h2>Less time finding information.<br>More room to understand it.</h2></div><div class="strip-copy"><p>Connect company disclosures with external evidence, then make the source, authority, and reasoning visible.</p><button class="text-link" data-action="research">Explore the information-economics rationale <span aria-hidden="true"><svg class="inline-arrow" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 14 14 4M4 4h10v10"/></svg></span></button></div></section>
+    </section>
+    <section id="workspace" class="workspace" hidden>
+      <aside class="workspace-nav" aria-label="Research workspace">
+        <div class="workspace-label">YOUR RESEARCH DESK</div>
+        <button class="desk-link active" data-view="ask"><span aria-hidden="true">✦</span> Ask &amp; explore</button>
+        <button class="desk-link" data-view="sources"><span aria-hidden="true">⌘</span> Source network</button>
+        <button class="desk-link" data-view="permissions"><span aria-hidden="true">◇</span> Roles &amp; access</button>
+        <button class="desk-link" data-view="ledger"><span aria-hidden="true">▤</span> Evidence trail</button>
+        <button class="desk-link" data-view="research"><span aria-hidden="true">❋</span> Research notebook</button>
+        <div class="sidebar-illustration"><img src="assets/pooh-character.webp" alt="Winnie the Pooh" width="100" height="133"><p>Follow the evidence.<br>Keep your curiosity.</p></div>
+        <button class="switch-role" data-action="change-role">⇄ Change perspective</button>
+      </aside>
+      <div class="desk-main">
+        <div class="desk-top"><div class="breadcrumbs">Research desk <span>/</span> <span id="view-name">Ask &amp; explore</span></div><button class="role-switch-pill" data-action="change-role"><span id="role-icon"></span><span id="current-role">Investor</span><span>⌄</span></button></div>
+        <div class="company-heading"><div><span class="eyebrow">A FICTIONAL COMPANY. REAL RESEARCH QUESTIONS.</span><h1>Miklos &amp; Co.<span class="company-tag">DEMO</span></h1><p id="role-description"></p></div><div class="period-tag"><span>DATA PERIOD</span><b>FY2025</b><small>USD millions</small></div></div>
+        <div class="scope-bar"><span class="scope-dot"></span><span id="current-scope"></span><button data-action="permissions">View permissions <span aria-hidden="true"><svg class="inline-arrow" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 14 14 4M4 4h10v10"/></svg></span></button></div>
+        <section id="view-ask" class="desk-view">
+          <form id="question-form" class="question-box"><label for="question">What would you like to understand?</label><div class="question-row"><span class="question-spark" aria-hidden="true">✦</span><input id="question" autocomplete="off" placeholder="Does Miklos & Co. have undervalued assets?"><button class="button primary" id="ask-button" type="submit">Ask the agent <span aria-hidden="true"><svg class="inline-arrow" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 14 14 4M4 4h10v10"/></svg></span></button></div><div id="suggestions" class="suggestion-row"></div><div class="input-note">Interactive scenario agent · English or Chinese example questions · no live model or database connection</div></form>
+          <div id="answer-area" aria-live="polite"></div>
+        </section>
+        <section id="view-sources" class="desk-view" hidden></section>
+        <section id="view-permissions" class="desk-view" hidden></section>
+        <section id="view-ledger" class="desk-view" hidden></section>
+        <section id="view-research" class="desk-view" hidden></section>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="footer-brand" href="#" data-action="home">honeycomb <span>✿</span></a><p>A research demonstration by Ya-Wen Cheng · Accounting &amp; Information Systems</p><div><button data-action="about">Demo boundaries</button><a href="https://github.com/YaWenCheng-0606/future-financial-reports-demonstration" target="_blank" rel="noopener">View on GitHub <svg class="inline-arrow" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 14 14 4M4 4h10v10"/></svg></a></div></footer>
+  <dialog id="detail-dialog" class="detail-dialog"><div class="dialog-top"><span id="dialog-kicker" class="eyebrow">FOLLOW THE EVIDENCE</span><button class="icon-button" data-action="close-dialog" aria-label="Close detail panel">✕</button></div><div id="dialog-body"></div></dialog>
+  <div id="tour-bar" class="tour-bar" hidden><div class="tour-progress"><span id="tour-number">01 / 07</span><span class="tour-line"><i id="tour-fill"></i></span></div><div class="tour-copy"><b id="tour-title"></b><span id="tour-text"></span></div><div class="tour-buttons"><button class="tour-back" data-action="tour-prev" aria-label="Previous tour step">←</button><button class="button primary" data-action="tour-next" id="tour-next">Next chapter →</button><button class="tour-close" data-action="tour-end" aria-label="End guided tour">✕</button></div></div>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <noscript><div class="noscript">Please enable JavaScript to explore this interactive research demonstration.</div></noscript>
+</body>
+</html>
