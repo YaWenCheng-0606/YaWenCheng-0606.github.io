@@ -51,7 +51,7 @@
   }
   function pathRow(labels){return '<div class="agent-path">'+labels.map((x,i)=>(i?'<span>→</span>':'')+'<b>'+esc(x)+'</b>').join('')+'</div>';}
   function answerTop(title,summary){
-    return '<div class="answer-question"><span aria-hidden="true">↳</span>'+esc(S.question)+'</div><div class="answer-header"><div><span class="eyebrow">YOUR QUESTION, CONNECTED TO EVIDENCE</span><h2>'+title+'</h2></div><span class="scenario-badge">SYNTHETIC SCENARIO</span></div><p class="answer-summary">'+summary+'</p>';
+    return '<div class="answer-question"><span aria-hidden="true"><svg class="inline-arrow" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 3v8h10m-4-4 4 4-4 4"/></svg></span>'+esc(S.question)+'</div><div class="answer-header"><div><span class="eyebrow">YOUR QUESTION, CONNECTED TO EVIDENCE</span><h2>'+title+'</h2></div><span class="scenario-badge">SYNTHETIC SCENARIO</span></div><p class="answer-summary">'+summary+'</p>';
   }
   function answerFooter(){
     return '<div class="answer-footer"><span>Company facts · external observations · platform estimates are separately attributed.</span><button class="text-link" data-action="export">Download evidence pack ↓</button></div>';
